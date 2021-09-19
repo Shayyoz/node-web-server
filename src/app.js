@@ -5,7 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const hbs = require('hbs')
 const { EEXIST } = require('constants')
-
+ 
 const app = express()
 const port = process.env.PORT || 3000
 const publicDirectory = path.join(__dirname,'../public')
