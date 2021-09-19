@@ -6,10 +6,8 @@ const forecast = require('./utils/forecast')
 const hbs = require('hbs')
 const { EEXIST } = require('constants')
 
-console.log(__dirname)
-console.log(path.join(__dirname,'../public/index.html'))
-
 const app = express()
+const port = process.env.PORT || 3000
 const publicDirectory = path.join(__dirname,'../public')
 const viewPath = path.join(__dirname,'../templates/views')
 const partialsPath = path.join(__dirname,'../templates/partials')
@@ -85,6 +83,6 @@ app.get('*',(req, res) =>{
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up in 3000 port')
+app.listen(port, () => {
+    console.log('Server is up in' + port + 'port')
 })
